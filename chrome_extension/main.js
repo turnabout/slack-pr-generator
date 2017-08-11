@@ -11,10 +11,11 @@ chrome.runtime.onMessage.addListener(function(request, sender) {
 			loading.style.display = 'none';
 
 			// show success image
-			success.style.display = 'block'
+			success.style.display = 'block';
+			success.style.margin = '0 0 10px';
 
 			// render the success message
-			message.innerText = "Go deploy that shit!\n\nDeploy message pasted and ready for Slack";
+			message.innerText = "\nDO IT!";
 
 			// copy the Slack message to the clipboard
 			var aux = document.createElement("input");
@@ -31,7 +32,7 @@ chrome.runtime.onMessage.addListener(function(request, sender) {
 			// show success image
 			error.style.display = 'block'
 			
-			message.innerText = "This is no Pull Request, get to work!";
+			message.innerText = "You obviously have no idea what you're doing. \nGo back to school.";
 		}
 	}
 });
